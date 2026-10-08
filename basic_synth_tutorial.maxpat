@@ -14,6 +14,30 @@
             {
                 "box": {
                     "bubble": 1,
+                    "id": "obj-52",
+                    "linecount": 8,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 1456.0, 423.0, 219.0, 118.0 ],
+                    "presentation_linecount": 8,
+                    "text": "Audible clicks happen with the line~ object because the signal or value jumps or changes too fast (discontinuity or a sharp \"corner\" in the slope), or because an envelope re-triggers mid-stream. Use a rampsmooth~ object to fix this issue."
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-40",
+                    "maxclass": "newobj",
+                    "numinlets": 3,
+                    "numoutlets": 1,
+                    "outlettype": [ "signal" ],
+                    "patching_rect": [ 1322.0, 471.0, 122.0, 22.0 ],
+                    "text": "rampsmooth~ 10. 10."
+                }
+            },
+            {
+                "box": {
+                    "bubble": 1,
                     "bubbleside": 2,
                     "id": "obj-51",
                     "linecount": 3,
@@ -21,7 +45,6 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 62.0, 565.0, 137.0, 66.0 ],
-                    "presentation_linecount": 2,
                     "text": "Have a look at the help files for these filter objects too!",
                     "textjustification": 1
                 }
@@ -1272,8 +1295,7 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-33", 2 ],
-                    "midpoints": [ 1330.8333333333333, 534.0, 785.0, 534.0 ],
+                    "destination": [ "obj-40", 0 ],
                     "source": [ "obj-31", 0 ]
                 }
             },
@@ -1314,6 +1336,13 @@
                 "patchline": {
                     "destination": [ "obj-29", 1 ],
                     "source": [ "obj-39", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-33", 2 ],
+                    "midpoints": [ 1331.5, 534.0, 785.0, 534.0 ],
+                    "source": [ "obj-40", 0 ]
                 }
             },
             {
