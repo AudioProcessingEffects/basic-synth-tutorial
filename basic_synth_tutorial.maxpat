@@ -9,8 +9,56 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 92.0, 1372.0, 806.0 ],
+        "rect": [ 34.0, 92.0, 1021.0, 806.0 ],
         "boxes": [
+            {
+                "box": {
+                    "bubble": 1,
+                    "bubbleside": 2,
+                    "id": "obj-51",
+                    "linecount": 3,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 62.0, 565.0, 137.0, 66.0 ],
+                    "presentation_linecount": 2,
+                    "text": "Have a look at the help files for these filter objects too!",
+                    "textjustification": 1
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-48",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "signal" ],
+                    "patching_rect": [ 93.0, 713.0, 58.0, 22.0 ],
+                    "text": "onepole~"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-44",
+                    "maxclass": "newobj",
+                    "numinlets": 3,
+                    "numoutlets": 4,
+                    "outlettype": [ "signal", "signal", "signal", "signal" ],
+                    "patching_rect": [ 93.0, 681.0, 50.5, 22.0 ],
+                    "text": "svf~"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-36",
+                    "maxclass": "newobj",
+                    "numinlets": 6,
+                    "numoutlets": 1,
+                    "outlettype": [ "signal" ],
+                    "patching_rect": [ 93.0, 649.0, 71.5, 22.0 ],
+                    "text": "biquad~"
+                }
+            },
             {
                 "box": {
                     "fontface": 3,
@@ -1083,6 +1131,19 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 208.20000000000005, 637.0, 475.0, 106.0 ],
+                    "proportion": 0.5
+                }
+            },
+            {
+                "box": {
+                    "angle": 270.0,
+                    "bgcolor": [ 0.372549019607843, 0.376470588235294, 0.337254901960784, 1.0 ],
+                    "id": "obj-50",
+                    "maxclass": "panel",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 73.0, 637.0, 115.0, 106.0 ],
                     "proportion": 0.5
                 }
             }
